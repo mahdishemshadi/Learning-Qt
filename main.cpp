@@ -1,19 +1,27 @@
-#include <QCoreApplication>
+#include<iostream>
+#include<QCoreApplication>
+
+using namespace std;
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
 
-    // Set up code that uses the Qt event loop here.
-    // Call a.quit() or a.exit() to quit the application.
-    // A not very useful example would be including
-    // #include <QTimer>
-    // near the top of the file and calling
-    // QTimer::singleShot(5000, &a, &QCoreApplication::quit);
-    // which quits the application after 5 seconds.
+    int age = 0;
+    int minAge = 1;
+    int maxAge = 120;
+    qDebug("Enter your age");
+    cin >> age;
 
-    // If you do not need a running Qt event loop, remove the call
-    // to a.exec() or use the Non-Qt Plain C++ Application template.
+    if (age >= minAge && age <= maxAge){
+        qDebug() << "Your age is:" << age;
+
+        int dogYears = age * 7;
+        qDebug() << "Your age in dog years is:" << dogYears;
+    }
+    else{
+        qWarning("Warning: You entered wrong age");
+    }
 
     return a.exec();
 }
