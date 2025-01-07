@@ -14,6 +14,7 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 
 add_executable(Age_calculator_OOP
   main.cpp
+  age_calculator.h age_calculator.cpp
 )
 target_link_libraries(Age_calculator_OOP Qt${QT_VERSION_MAJOR}::Core)
 
