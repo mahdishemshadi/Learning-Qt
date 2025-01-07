@@ -15,7 +15,15 @@ public:
     QString getName() const;
     void setName(QString newName);
 
+    int dogYears() const;
+    int catYears() const;
+    int humanYears() const;
+
 private:
+    const int dogYearsFactor = 7;
+    const int catYearsFactor = 9;
+    const int humanYearsFactor = 1;
+
     int age;
     QString name;
 };

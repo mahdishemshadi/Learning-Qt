@@ -19,3 +19,15 @@ QString age_calculator::getName() const {
 void age_calculator::setName(QString newName){
     name = newName;
 }
+
+int age_calculator::dogYears() const{
+    return dogYearsFactor * age;
+}
+
+int age_calculator::catYears() const{
+    return catYearsFactor * age;
+}
+
+int age_calculator::humanYears() const{
+    return humanYearsFactor * age;
+}
