@@ -1,0 +1,5 @@
+# dirs
+build/
+
+# files
+CMakeLists.txt.user
